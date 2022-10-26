@@ -1,0 +1,5 @@
+install: 
+  - "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+language: java
+script: 
+  - "mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=miw-upm-github -Dsonar.login=$SONAR"
